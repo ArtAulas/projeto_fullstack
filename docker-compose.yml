@@ -1,0 +1,20 @@
+  services:
+    postgresql:
+        image: postgres
+        environment:
+          POSTGRES_USER: example
+          POSTGRES_PASSWORD: example
+        ports:
+          - 5432:5432
+    pgadmin:
+        image: dpage/pgadmin4
+        environment:
+          POSTGRES_USER: example
+          POSTGRES_PASSWORD: example
+        ports:
+          - 8080:80
+        depends_on:
+          - postgresql
+
+#comando para rodar:
+#docker-compose up -d 
