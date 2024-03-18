@@ -12,7 +12,7 @@
           POSTGRES_USER: example
           POSTGRES_PASSWORD: example
         ports:
-          - 8080:80
+          - 8081:8081
         depends_on:
           - postgresql
 
